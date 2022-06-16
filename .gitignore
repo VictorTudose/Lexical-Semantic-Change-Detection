@@ -1,0 +1,9 @@
+results/
+models/
+ext_confs/
+precomp_results/
+*/__pycache__/
+ideas.txt
+corpora/
+doc/
+scripts/
