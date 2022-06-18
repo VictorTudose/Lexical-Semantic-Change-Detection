@@ -7,57 +7,88 @@ import plotly.express as px
 import json
 import csv
 import numpy as np
-
 from sklearn.manifold import TSNE
-from torch import embedding
-
 
 app = Flask(__name__)
 
-def get_embeddings(file_name, k = 40):
-    keys = []
-    embeddings = []
+def get_represenations():
+    results = []
+    representations = listdir('data')
+    for result_directory in representations:
+        disp_name = result_directory.replace('_', ' ')
+        results.append({'name': disp_name, 'value': result_directory})
+    model = {"repressentations": results}
+    return model
 
-    with open(file_name, 'r') as f:
-        csv_reader = csv.reader(f, delimiter=',')
-        sup = 0
-        for row in csv_reader:
-            keys.append(row[0])
-            embeddings.append([row[1:]])
-            sup += 1
-            if sup == k:
-                break
-    tsne_model_3d = TSNE(n_components=3, learning_rate='auto', init='random')
-    embeddings = np.array(embeddings)
-    n, m, k = embeddings.shape
-    embeddings_3d = np.array(tsne_model_3d.fit_transform(embeddings.reshape(n * m, k))).reshape(n, m, 3)
-    embeddings_3d = [embedding[0] for embedding in embeddings_3d]
-    return embeddings_3d, keys
+def get_embeddings(file_name, k = 40):
+    try:
+        keys = []
+        embeddings = []
+
+        with open(file_name, 'r') as f:
+            csv_reader = csv.reader(f, delimiter=',')
+            sup = 0
+            for row in csv_reader:
+                keys.append(row[0])
+                embeddings.append([row[1:]])
+                sup += 1
+                if sup == k:
+                    break
+        tsne_model_3d = TSNE(n_components=3, learning_rate='auto', init='random')
+        embeddings = np.array(embeddings)
+        n, m, k = embeddings.shape
+        embeddings_3d = np.array(tsne_model_3d.fit_transform(embeddings.reshape(n * m, k))).reshape(n, m, 3)
+        embeddings_3d = [embedding[0] for embedding in embeddings_3d]
+        return embeddings_3d, keys
+    except:
+        return None, None
 
 @app.route('/results')
 def results():
     args = request.args
     model = {}
+    graphJSON = None
     if 'results' in args:
         result_directory = args['results']
         model = json.load(open(f"data/{result_directory}/desc.json", 'r'))
         model["root"] = f"data/{result_directory}/"
         embeddings, keys = get_embeddings(f"data/{result_directory}/words.csv")
-        df = pd.DataFrame(embeddings, columns=['x', 'y', 'z'], index=keys)
-        fig = px.scatter_3d(df, x='x', y='y', z='z')
-        graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+        if embeddings is not None:
+            keys = [key[:-2] for key in keys]
+
+            key2embs = {}
+            emb2key = {}
+            for key, embedding in zip(keys, embeddings):
+                if key not in key2embs:
+                    key2embs[key] = []
+                key2embs[key].append(embedding)
+                emb2key[str(embedding)] = key
+            key2diff = {}
+            for key in keys:
+                key2diff[key] = np.linalg.norm(np.array(key2embs[key][1]) - np.array(key2embs[key][0]))
+
+            diffs = []
+            for embedding in embeddings:
+                diffs.append(key2diff[emb2key[str(embedding)]])
+            print(diffs)
+            
+            e1s = [embedding[0] for embedding in embeddings]
+            e2s = [embedding[1] for embedding in embeddings]
+            e3s = [embedding[2] for embedding in embeddings]
+            embs = [[e1,e2,e3,w] for e1,e2,e3,w in zip(e1s, e2s, e3s, keys)]
+            df = pd.DataFrame(embs, columns=['x', 'y', 'z', 'word'])
+            fig = px.line_3d(df, x='x', y='y', z='z', color='word', width=1200, height=1200, hover_name= diffs)
+            graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+        else:
+            model.update({"no_embeddings": True})
+        model.update(get_represenations())
         return render_template('results.html',graphJSON=graphJSON, model = model)
     else:
         return render_template('results.html', model = {})
 
 @app.route('/')
 def index():
-    results = []
-    results_directories = listdir('data')
-    for result_directory in results_directories:
-        results.append(result_directory.replace('_', ' '))
-    model = {"results": results}
-    return render_template('index.html', model = model)
+    return render_template('index.html', model = get_represenations())
 
 if __name__ == '__main__':
     app.run(debug=True)

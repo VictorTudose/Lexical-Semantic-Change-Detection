@@ -1,7 +1,8 @@
 {% extends 'dash_base.html' %}
 
 {% block body %}
-  <body>
+  <div class="content">
+
 
     <table>
       <tr>
@@ -27,7 +28,7 @@
       </tr>
 
       {% if model.results|length < 1 %}
-        <tr ><td colspan="6">No data found</td></tr>
+        <tr><td colspan="6">No data found</td></tr>
       {% else %}
         {% for result in model.results %}
             <tr>
@@ -55,12 +56,16 @@
 
     </table>    
     
-    
+    {% if model.no_embeddings %}
+      <p>No embeddings found</p>
+    {% else %}
+      <div style="margin: 32px;">
+        <h1>Embeddings</h1>
+        <div id='chart' class='chart'”></div>
+      </div>
+    {% endif %}
 
-    <h1>Embeddings</h1>
-    <div id='chart' class='chart'”></div>
-
-  </body>
+  </div>
 
 
 {% endblock %}

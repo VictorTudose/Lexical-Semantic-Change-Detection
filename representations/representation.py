@@ -63,6 +63,7 @@ class Representation():
         dict['language'] = test_json['language']
         dict['tesk_description'] = test_json['description']
         dict['distance_metrics'] = self.distance_metrics()
+        dict['results'] = []
         dir_name = f'{test_json["target"]}/{self.get_name()}_{test_json["name"]}'
 
         if not os.path.exists(dir_name):
@@ -128,19 +129,21 @@ class Representation():
 
             if not ranking_tests:
 
-                dict[distance_metric] = {}
-                dict[distance_metric]['score'] = score
-                dict[distance_metric]['metric'] = distance_metric
-                dict[distance_metric]['max_score'] = max_score
-                dict[distance_metric]['true_positives'] = true_positives
-                dict[distance_metric]['false_positives'] = false_positives
-                dict[distance_metric]['true_negatives'] = true_negatives
-                dict[distance_metric]['false_negatives'] = false_negatives
+                dict_distance_metric = {}
+                dict_distance_metric['score'] = score
+                dict_distance_metric['metric'] = distance_metric
+                dict_distance_metric['max_score'] = max_score
+                dict_distance_metric['true_positives'] = true_positives
+                dict_distance_metric['false_positives'] = false_positives
+                dict_distance_metric['true_negatives'] = true_negatives
+                dict_distance_metric['false_negatives'] = false_negatives
                 
                 if not "ignore_spearmanr" in test_json:
                     sp = stats.spearmanr(self.results, self.expecteds)
-                    dict[distance_metric]['spearmanr_pvalue'] = sp.pvalue
-                    dict[distance_metric]['spearmanr_correlation'] = sp.correlation
+                    dict_distance_metric['spearmanr_pvalue'] = sp.pvalue
+                    dict_distance_metric['spearmanr_correlation'] = sp.correlation
+                
+                dict['results'].append(dict_distance_metric)
 
                 to_plot = {'Results': self.results,
                     'Expected': self.expecteds
