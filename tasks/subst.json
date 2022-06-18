@@ -1,4 +1,5 @@
 {
+    "target": "demo/data",
     "language": "en",
     "name": "alice_subst",
     "description":"Substitution A->B and B->A",

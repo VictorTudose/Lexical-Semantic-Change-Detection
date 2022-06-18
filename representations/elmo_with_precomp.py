@@ -11,6 +11,9 @@ class ELMo(Representation):
         self.words = [[], []]
         self.clusterings = [{}, {}]
 
+    def distance_metrics(self):
+        return ["jsd", "pointwise"]
+
     def get_name(self):
         return "elmo"
     
@@ -40,10 +43,9 @@ class ELMo(Representation):
         self.load_corpus(path2, 1)
     
     def compare(self, word, distance_metric = None):
-        if distance_metric is None:
-            distance_metric = "euclidean"
-        if word not in self.words[0]:
-            return 0
-        if word not in self.words[1]:
-            return 0
-        
+        if distance_metric == "jsd":
+            return self.jsd(word)
+        if distance_metric == "pointwise":
+            return self.pointwise(word)
+        return 0
+    

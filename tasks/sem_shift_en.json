@@ -1,4 +1,5 @@
 {
+    "target": "demo/data",
     "language": "en",
     "name": "eng_sem_change_description",
     "description": "Semantic change description for english",
@@ -6,7 +7,7 @@
         "corpora/semeval/english/dataset_per1/corpus.txt",
         "corpora/semeval/english/dataset_per2/corpus.txt"
     ],
-    "threshold" : 0.05,
+    "threshold": 0.05,
     "tests": [
         {
             "word": "address",

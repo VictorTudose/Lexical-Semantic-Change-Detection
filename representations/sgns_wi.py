@@ -1,13 +1,11 @@
 from representations.representation import Representation
-
+from representations.distances import compute_distance_for_points
 from nltk.tokenize import sent_tokenize, word_tokenize
 from gensim.models import Word2Vec
 
-from scipy.spatial import distance
-
 class SGNS(Representation):
     def get_name(self):
-         return "sgns_wi_cd"
+         return "sgns_wi"
 
     def distance_metrics(self):
         return ['euclidean', 'cosine']
@@ -49,13 +47,18 @@ class SGNS(Representation):
         self.model.save(path)
 
     def compare(self, word, distance_type):
+        ws = self.get_embseddings(word)
+        if len(ws) == 2:
+            w1 = ws[0]
+            w2 = ws[1]
+            return compute_distance_for_points(w1, w2, distance_type)
+        return None
+    
+    def get_embseddings(self, word):
         word1 = f"{word}1"
         word2 = f"{word}2"
         if word1 in self.model.wv.key_to_index and word2 in self.model.wv.key_to_index:
             w1 = self.model.wv[word1]
             w2 = self.model.wv[word2]
-            if distance_type == "cosine":
-                return distance.cosine(w1, w2) * 1e6
-            if distance_type == "euclidean":
-                return  distance.euclidean(w1, w2) * 1e6
-        return None
+            return [w1,w2]
+        return []

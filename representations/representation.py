@@ -4,6 +4,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
+from torch import embedding
 
 class Representation():
     """
@@ -27,6 +28,9 @@ class Representation():
 
     def load_data(self, path1 ,path2, targets):
         pass
+
+    def get_embseddings(self, word):
+        return []
 
     def compare(self, word, distance_metric = None):
         return 0
@@ -59,8 +63,9 @@ class Representation():
         dict = {}
         dict['name'] = self.get_name()
         dict['language'] = test_json['language']
-        dict['tesk_description'] = test_json['description']    
-        dir_name = f'results/{self.get_name()}_{test_json["name"]}'
+        dict['tesk_description'] = test_json['description']
+        dict['distance_metrics'] = self.distance_metrics()
+        dir_name = f'{test_json["target"]}/{self.get_name()}_{test_json["name"]}'
 
         if not os.path.exists(dir_name):
             os.mkdir(dir_name)
@@ -132,10 +137,6 @@ class Representation():
                 dict[distance_metric]['false_positives'] = false_positives
                 dict[distance_metric]['true_negatives'] = true_negatives
                 dict[distance_metric]['false_negatives'] = false_negatives
-                dict[distance_metric]['precision'] = true_positives / (true_positives + false_positives)
-                dict[distance_metric]['recall'] = true_positives / (true_positives + false_negatives)
-                dict[distance_metric]['f1'] = 2 * dict[distance_metric]['precision'] * dict[distance_metric]['recall'] / (dict[distance_metric]['precision'] + dict[distance_metric]['recall'])
-                dict[distance_metric]['accuracy'] = (true_positives + true_negatives) / (true_positives + false_positives + true_negatives + false_negatives)
                 
                 if not "ignore_spearmanr" in test_json:
                     sp = stats.spearmanr(self.results, self.expecteds)
@@ -175,6 +176,17 @@ class Representation():
             
             self.save_results(dir_name, distance_metric)
 
+        with open(f'{dir_name}/words.csv', 'w') as file:
+            writer = csv.writer(file)
+            for test in test_json['tests']:
+                word = test['word']
+                embeddings = self.get_embseddings(word)
+                for index, embedding in enumerate(embeddings):
+                    row = [f'{word}_{index}']
+                    for val in embedding:
+                        row.append(val)
+                    writer.writerow(row)
+                
         desc_file = open(f"{dir_name}/desc.json", "w")
         json.dump(dict, desc_file, indent = 4)
         desc_file.close()

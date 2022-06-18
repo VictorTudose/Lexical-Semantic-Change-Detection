@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="content">
+    <div class="result-row">
+      {% if model.results|length < 1 %}
+        <div class="alert alert-danger" role="alert">
+          No results for this kind of repressentations!
+        </div>
+      {% else %}
+        {% for result in model.results %}
+            <div class="result-item">
+                <div class="result-name">
+                {{result}}
+                </div>
+            </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+</div>
+
+{% endblock %}

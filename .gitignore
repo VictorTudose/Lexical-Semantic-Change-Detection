@@ -5,5 +5,8 @@ precomp_results/
 */__pycache__/
 ideas.txt
 corpora/
+!corpora/utils/
 doc/
 scripts/
+collab/models/
+demo/data
