@@ -7,7 +7,7 @@ if argv[1] == "sgns_op":
 elif argv[1] == "sgns_wi":
     model = sgns_wi.SGNS()
 elif argv[1] == "elmo_with_precomp":
-    model = elmo_with_precomp.ELMO()
+    model = elmo_with_precomp.ELMo()
 else:
     print("Model not supported")
     exit(1)

@@ -10,3 +10,4 @@ doc/
 scripts/
 collab/models/
 demo/data
+__pycache__

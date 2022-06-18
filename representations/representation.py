@@ -55,9 +55,7 @@ class Representation():
 
         self.load_data(test_json["corpora"][0], test_json["corpora"][1],[test["word"] for test in test_json["tests"]])
         
-        if "model_path" in test_json:
-            self.load_model(test_json["model_path"])
-        else:
+        if not "skip_training" in test_json:
             self.train()
 
         dict = {}
@@ -132,6 +130,7 @@ class Representation():
 
                 dict[distance_metric] = {}
                 dict[distance_metric]['score'] = score
+                dict[distance_metric]['metric'] = distance_metric
                 dict[distance_metric]['max_score'] = max_score
                 dict[distance_metric]['true_positives'] = true_positives
                 dict[distance_metric]['false_positives'] = false_positives

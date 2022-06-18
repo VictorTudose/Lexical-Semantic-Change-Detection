@@ -1,23 +1,66 @@
-{% extends 'base.html' %}
+{% extends 'dash_base.html' %}
 
 {% block body %}
+  <body>
 
-<div class="content">
-    <div class="result-row">
-      {% if model.distance_metrics|length < 1 %}
-        <div class="alert alert-danger" role="alert">
-          No distance_metrics for this kind of repressentations!
-        </div>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Language</th>
+        <th>Task</th>
+      </tr>
+      <tr>
+        <td>{{model.name}}</td>
+        <td>{{model.language}}</td>
+        <td>{{model.tesk_description}}</td>
+      </tr>
+    </table>    
+    
+    <table>
+      <tr>
+        <th>Metric</th>
+        <th>Score</th>
+        <th>True positives</th>
+        <th>True negatives</th>
+        <th>False positives</th>
+        <th>False negatives</th>
+      </tr>
+
+      {% if model.results|length < 1 %}
+        <tr ><td colspan="6">No data found</td></tr>
       {% else %}
-        {% for distance_metric in model.distance_metrics %}
-            <div class="result-item">
-                <div class="result-name">
-                {{distance_metric}}
-                </div>
-            </div>
+        {% for result in model.results %}
+            <tr>
+              <td>
+                {{result.metric}}
+              </td>
+              <td>
+                {{result.score}}
+              </td>
+              <td>
+                {{result.true_positives}}
+              </td>
+              <td>
+                {{result.true_negatives}}
+              </td>
+              <td>
+                {{result.false_positives}}
+              </td>
+              <td>
+                {{result.false_negatives}}
+              </td>
+            </tr>
         {% endfor %}
       {% endif %}
-    </div>
-</div>
+
+    </table>    
+    
+    
+
+    <h1>Embeddings</h1>
+    <div id='chart' class='chart'”></div>
+
+  </body>
+
 
 {% endblock %}
