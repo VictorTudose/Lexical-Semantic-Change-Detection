@@ -38,16 +38,10 @@ class ELMo(Representation):
     def compare(self, word, distance_metric = None):
         words1 = list(self.word_clusters[0].keys())
         words2 = list(self.word_clusters[1].keys())
-        
         if word not in words1 and word not in words2:
             return 0
-
         if word not in words1:
             return 1
-
         if word not in words2:
             return 1
-
-        print(f'Computing for {word}')
-
         return compute_distances_for_sets(self.word_clusters[0][word], self.word_clusters[1][word], distance_metric)
