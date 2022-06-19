@@ -1,0 +1,814 @@
+{
+    "target": "demo/data",
+    "language": "en",
+    "name": "synthetic_100",
+    "description": "synthetic corpus test with 100 words replaced",
+    "ignore_spearmanr": 1,
+    "corpora": [
+        "corpora/alice/alice.txt",
+        "corpora/alice/alice_mod100.txt"
+    ],
+    "threshold": 0.05,
+    "tests": [
+        {
+            "word": "humbly;",
+            "expected": 1.0
+        },
+        {
+            "word": "easy",
+            "expected": 1.0
+        },
+        {
+            "word": "Time,",
+            "expected": 1.0
+        },
+        {
+            "word": "home!",
+            "expected": 1.0
+        },
+        {
+            "word": "Two!\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cYou\u2019d",
+            "expected": 1.0
+        },
+        {
+            "word": "history,",
+            "expected": 1.0
+        },
+        {
+            "word": "sooner",
+            "expected": 1.0
+        },
+        {
+            "word": "attended",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cGive",
+            "expected": 1.0
+        },
+        {
+            "word": "moving",
+            "expected": 1.0
+        },
+        {
+            "word": "least",
+            "expected": 1.0
+        },
+        {
+            "word": "facility:",
+            "expected": 1.0
+        },
+        {
+            "word": "became",
+            "expected": 1.0
+        },
+        {
+            "word": "809",
+            "expected": 1.0
+        },
+        {
+            "word": "three",
+            "expected": 1.0
+        },
+        {
+            "word": "giddy.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "proceed,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "repeat",
+            "expected": 1.0
+        },
+        {
+            "word": "readable",
+            "expected": 1.0
+        },
+        {
+            "word": "effect",
+            "expected": 1.0
+        },
+        {
+            "word": "Sing",
+            "expected": 1.0
+        },
+        {
+            "word": "diligently",
+            "expected": 1.0
+        },
+        {
+            "word": "begged",
+            "expected": 1.0
+        },
+        {
+            "word": "slate.",
+            "expected": 1.0
+        },
+        {
+            "word": "return",
+            "expected": 1.0
+        },
+        {
+            "word": "all.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "mine,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "that\u2014only",
+            "expected": 1.0
+        },
+        {
+            "word": "ridges",
+            "expected": 1.0
+        },
+        {
+            "word": "well,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "consented",
+            "expected": 1.0
+        },
+        {
+            "word": "clearly",
+            "expected": 1.0
+        },
+        {
+            "word": "checks,",
+            "expected": 1.0
+        },
+        {
+            "word": "form",
+            "expected": 1.0
+        },
+        {
+            "word": "hopeless",
+            "expected": 1.0
+        },
+        {
+            "word": "snout",
+            "expected": 1.0
+        },
+        {
+            "word": "other,",
+            "expected": 1.0
+        },
+        {
+            "word": "stamping",
+            "expected": 1.0
+        },
+        {
+            "word": "told",
+            "expected": 1.0
+        },
+        {
+            "word": "updated:",
+            "expected": 1.0
+        },
+        {
+            "word": "Majesty,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "opposite",
+            "expected": 1.0
+        },
+        {
+            "word": "balanced",
+            "expected": 1.0
+        },
+        {
+            "word": "practically",
+            "expected": 1.0
+        },
+        {
+            "word": "easily",
+            "expected": 1.0
+        },
+        {
+            "word": "fury,",
+            "expected": 1.0
+        },
+        {
+            "word": "paragraphs",
+            "expected": 1.0
+        },
+        {
+            "word": "thrown",
+            "expected": 1.0
+        },
+        {
+            "word": "first,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "crash,",
+            "expected": 1.0
+        },
+        {
+            "word": "Pennyworth",
+            "expected": 1.0
+        },
+        {
+            "word": "until",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cWell,",
+            "expected": 1.0
+        },
+        {
+            "word": "sentence,",
+            "expected": 1.0
+        },
+        {
+            "word": "speech,",
+            "expected": 1.0
+        },
+        {
+            "word": "ordered.",
+            "expected": 1.0
+        },
+        {
+            "word": "pinch",
+            "expected": 1.0
+        },
+        {
+            "word": "immense",
+            "expected": 1.0
+        },
+        {
+            "word": "uncomfortable,",
+            "expected": 1.0
+        },
+        {
+            "word": "open",
+            "expected": 1.0
+        },
+        {
+            "word": "is",
+            "expected": 1.0
+        },
+        {
+            "word": "business,",
+            "expected": 1.0
+        },
+        {
+            "word": "cards,",
+            "expected": 1.0
+        },
+        {
+            "word": "Thus,",
+            "expected": 1.0
+        },
+        {
+            "word": "yer",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cBack",
+            "expected": 1.0
+        },
+        {
+            "word": "sand",
+            "expected": 1.0
+        },
+        {
+            "word": "impatient",
+            "expected": 1.0
+        },
+        {
+            "word": "WARRANTIES",
+            "expected": 1.0
+        },
+        {
+            "word": "1.E.5.",
+            "expected": 1.0
+        },
+        {
+            "word": "fly",
+            "expected": 1.0
+        },
+        {
+            "word": "hedgehog,",
+            "expected": 1.0
+        },
+        {
+            "word": "would,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "failure.",
+            "expected": 1.0
+        },
+        {
+            "word": "good,",
+            "expected": 1.0
+        },
+        {
+            "word": "she",
+            "expected": 1.0
+        },
+        {
+            "word": "twinkle_\u2014\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "chimney,",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cThey",
+            "expected": 1.0
+        },
+        {
+            "word": "pocket,",
+            "expected": 1.0
+        },
+        {
+            "word": "voice",
+            "expected": 1.0
+        },
+        {
+            "word": "generally,",
+            "expected": 1.0
+        },
+        {
+            "word": "indicating",
+            "expected": 1.0
+        },
+        {
+            "word": "taken",
+            "expected": 1.0
+        },
+        {
+            "word": "stop.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "day,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "lower,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "defective",
+            "expected": 1.0
+        },
+        {
+            "word": "stupid),",
+            "expected": 1.0
+        },
+        {
+            "word": "\u2018_poison_\u2019",
+            "expected": 1.0
+        },
+        {
+            "word": "bats,",
+            "expected": 1.0
+        },
+        {
+            "word": "they",
+            "expected": 1.0
+        },
+        {
+            "word": "_was_",
+            "expected": 1.0
+        },
+        {
+            "word": "which",
+            "expected": 1.0
+        },
+        {
+            "word": "wise",
+            "expected": 1.0
+        },
+        {
+            "word": "to-night,",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cTheir",
+            "expected": 1.0
+        },
+        {
+            "word": "going",
+            "expected": 1.0
+        },
+        {
+            "word": "wow!",
+            "expected": 1.0
+        },
+        {
+            "word": "loudly",
+            "expected": 1.0
+        },
+        {
+            "word": "sadly.",
+            "expected": 1.0
+        },
+        {
+            "word": "weren\u2019t",
+            "expected": 1.0
+        },
+        {
+            "word": "PURPOSE.",
+            "expected": 1.0
+        },
+        {
+            "word": "that,",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201ceither",
+            "expected": 1.0
+        },
+        {
+            "word": "clever",
+            "expected": 1.0
+        },
+        {
+            "word": "sort",
+            "expected": 1.0
+        },
+        {
+            "word": "-",
+            "expected": 1.0
+        },
+        {
+            "word": "too:",
+            "expected": 1.0
+        },
+        {
+            "word": "promising,",
+            "expected": 1.0
+        },
+        {
+            "word": "_some_",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201ctill",
+            "expected": 1.0
+        },
+        {
+            "word": "same,",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cThen,",
+            "expected": 1.0
+        },
+        {
+            "word": "_that\u2019s_",
+            "expected": 1.0
+        },
+        {
+            "word": "nice,",
+            "expected": 1.0
+        },
+        {
+            "word": "did:",
+            "expected": 1.0
+        },
+        {
+            "word": "pine-apple,",
+            "expected": 1.0
+        },
+        {
+            "word": "laughed,",
+            "expected": 1.0
+        },
+        {
+            "word": "her,",
+            "expected": 1.0
+        },
+        {
+            "word": "catching",
+            "expected": 1.0
+        },
+        {
+            "word": "talk",
+            "expected": 1.0
+        },
+        {
+            "word": "cannot",
+            "expected": 1.0
+        },
+        {
+            "word": "by\u2014the",
+            "expected": 1.0
+        },
+        {
+            "word": "managing",
+            "expected": 1.0
+        },
+        {
+            "word": "like",
+            "expected": 1.0
+        },
+        {
+            "word": "circumstances.",
+            "expected": 1.0
+        },
+        {
+            "word": "repeated,",
+            "expected": 1.0
+        },
+        {
+            "word": "eggs",
+            "expected": 1.0
+        },
+        {
+            "word": "sneezes;",
+            "expected": 1.0
+        },
+        {
+            "word": "that\u2019s",
+            "expected": 1.0
+        },
+        {
+            "word": "clapping",
+            "expected": 1.0
+        },
+        {
+            "word": "suppose.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "together.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "North",
+            "expected": 1.0
+        },
+        {
+            "word": "tipped",
+            "expected": 1.0
+        },
+        {
+            "word": "But,",
+            "expected": 1.0
+        },
+        {
+            "word": "sage,",
+            "expected": 1.0
+        },
+        {
+            "word": "hit",
+            "expected": 1.0
+        },
+        {
+            "word": "land",
+            "expected": 1.0
+        },
+        {
+            "word": "notice",
+            "expected": 1.0
+        },
+        {
+            "word": "high",
+            "expected": 1.0
+        },
+        {
+            "word": "already,",
+            "expected": 1.0
+        },
+        {
+            "word": "yourself",
+            "expected": 1.0
+        },
+        {
+            "word": "Alice;",
+            "expected": 1.0
+        },
+        {
+            "word": "cart-horse,",
+            "expected": 1.0
+        },
+        {
+            "word": "fig?\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "meaning.",
+            "expected": 1.0
+        },
+        {
+            "word": "brass",
+            "expected": 1.0
+        },
+        {
+            "word": "injure",
+            "expected": 1.0
+        },
+        {
+            "word": "absurd,",
+            "expected": 1.0
+        },
+        {
+            "word": "remarked;",
+            "expected": 1.0
+        },
+        {
+            "word": "copy,",
+            "expected": 1.0
+        },
+        {
+            "word": "dance.",
+            "expected": 1.0
+        },
+        {
+            "word": "graceful",
+            "expected": 1.0
+        },
+        {
+            "word": "generations",
+            "expected": 1.0
+        },
+        {
+            "word": "heavy",
+            "expected": 1.0
+        },
+        {
+            "word": "curtain",
+            "expected": 1.0
+        },
+        {
+            "word": "over)",
+            "expected": 1.0
+        },
+        {
+            "word": "lamps",
+            "expected": 1.0
+        },
+        {
+            "word": "Which",
+            "expected": 1.0
+        },
+        {
+            "word": "indeed:",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cSuppose",
+            "expected": 1.0
+        },
+        {
+            "word": "so.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "son,",
+            "expected": 1.0
+        },
+        {
+            "word": "fall,",
+            "expected": 1.0
+        },
+        {
+            "word": "fancy",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cORANGE",
+            "expected": 1.0
+        },
+        {
+            "word": "Pigeon,",
+            "expected": 1.0
+        },
+        {
+            "word": "stored,",
+            "expected": 1.0
+        },
+        {
+            "word": "subject.",
+            "expected": 1.0
+        },
+        {
+            "word": "housemaid,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "key",
+            "expected": 1.0
+        },
+        {
+            "word": "me?\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "fan!",
+            "expected": 1.0
+        },
+        {
+            "word": "plates,",
+            "expected": 1.0
+        },
+        {
+            "word": "somewhere.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "lay",
+            "expected": 1.0
+        },
+        {
+            "word": "finishing",
+            "expected": 1.0
+        },
+        {
+            "word": "near.",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cRead",
+            "expected": 1.0
+        },
+        {
+            "word": "table",
+            "expected": 1.0
+        },
+        {
+            "word": "person,",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201c\u2014so",
+            "expected": 1.0
+        },
+        {
+            "word": "(Which",
+            "expected": 1.0
+        },
+        {
+            "word": "countries",
+            "expected": 1.0
+        },
+        {
+            "word": "effect,",
+            "expected": 1.0
+        },
+        {
+            "word": "Any",
+            "expected": 1.0
+        },
+        {
+            "word": "collection",
+            "expected": 1.0
+        },
+        {
+            "word": "_think_",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cWhat",
+            "expected": 1.0
+        },
+        {
+            "word": "guinea-pig",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cAll",
+            "expected": 1.0
+        },
+        {
+            "word": "once;",
+            "expected": 1.0
+        },
+        {
+            "word": "Magpie",
+            "expected": 1.0
+        },
+        {
+            "word": "doubtfully,",
+            "expected": 1.0
+        },
+        {
+            "word": "fact,",
+            "expected": 1.0
+        },
+        {
+            "word": "hedgehogs;",
+            "expected": 1.0
+        },
+        {
+            "word": "sir,\u201d",
+            "expected": 1.0
+        }
+    ]
+}

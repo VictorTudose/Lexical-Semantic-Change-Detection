@@ -43,6 +43,42 @@ def get_embeddings(file_name, k = 40):
     except:
         return None, None
 
+@app.route('/compare')
+def redirect():
+    model = {}
+    graphJSON = None
+    if len(request.args) > 0:
+        names = []
+        tps = []
+        fps = []
+        tns = []
+        fns = []
+        for arg in request.args:
+            data = json.load(open(f"data/{arg}/desc.json", 'r'))
+            for results in data['results']:
+                names.append(f"{data['name']}_{results['metric']}")
+                tps.append(results['true_positives'])
+                fps.append(results['false_positives'])
+                tns.append(results['true_negatives'])
+                fns.append(results['false_negatives'])
+        model = {'name': names, 'true positives': tps, 'false positives': fps, 'true negatives': tns, 'false negatives': fns}
+        df = pd.DataFrame(model, columns=['name', 'true positives', 'false positives', 'true negatives', 'false negatives'])
+        fig = px.bar(df, x="name", y=['true positives','false positives','true negatives','false negatives'], barmode="group")
+        fig.update_layout(barmode='group', xaxis_tickangle=-45)
+        fig.update_xaxes(title_text="Metric")
+        fig.update_yaxes(title_text="Count")
+        fig.update_layout(height=800, width=800)
+        graphJSON = json.dumps(fig, cls=plotly.utils.PlotlyJSONEncoder)
+    else:
+        model = get_represenations()
+        model["no_models"] = True
+    model.update(get_represenations())
+    return render_template('compare.html', graphJSON=graphJSON, model=model)
+
+@app.route('/compare_select')
+def compare_select():
+    return render_template('compare_select.html', model=get_represenations())
+
 @app.route('/results')
 def results():
     args = request.args

@@ -1,0 +1,94 @@
+{
+    "target": "demo/data",
+    "language": "en",
+    "name": "synthetic_10",
+    "description": "synthetic corpus test with 10 words replaced",
+    "ignore_spearmanr": 1,
+    "corpora": [
+        "corpora/alice/alice.txt",
+        "corpora/alice/alice_mod10.txt"
+    ],
+    "threshold": 0.05,
+    "tests": [
+        {
+            "word": "better.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "dry",
+            "expected": 1.0
+        },
+        {
+            "word": "throne",
+            "expected": 1.0
+        },
+        {
+            "word": "(the",
+            "expected": 1.0
+        },
+        {
+            "word": "goals",
+            "expected": 1.0
+        },
+        {
+            "word": "Revenue",
+            "expected": 1.0
+        },
+        {
+            "word": "plan!\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "spoke\u2014fancy",
+            "expected": 1.0
+        },
+        {
+            "word": "pleasure",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201c\u2014for",
+            "expected": 1.0
+        },
+        {
+            "word": "kitchen.",
+            "expected": 1.0
+        },
+        {
+            "word": "none",
+            "expected": 1.0
+        },
+        {
+            "word": "mean",
+            "expected": 1.0
+        },
+        {
+            "word": "like,",
+            "expected": 1.0
+        },
+        {
+            "word": "appeared",
+            "expected": 1.0
+        },
+        {
+            "word": "Cat,",
+            "expected": 1.0
+        },
+        {
+            "word": "puppy",
+            "expected": 1.0
+        },
+        {
+            "word": "sister",
+            "expected": 1.0
+        },
+        {
+            "word": "birthday",
+            "expected": 1.0
+        },
+        {
+            "word": "Hatter.",
+            "expected": 1.0
+        }
+    ]
+}

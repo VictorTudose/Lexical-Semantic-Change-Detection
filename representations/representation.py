@@ -59,7 +59,7 @@ class Representation():
             self.train()
 
         dict = {}
-        dict['name'] = self.get_name()
+        dict['name'] = f"{self.get_name()}_{test_json['name']}"
         dict['language'] = test_json['language']
         dict['tesk_description'] = test_json['description']
         dict['distance_metrics'] = self.distance_metrics()
@@ -70,8 +70,6 @@ class Representation():
             os.mkdir(dir_name)
 
         for distance_metric in self.distance_metrics():
-            max_score = 0
-            score = 0
 
             self.actuals = []
             self.expecteds = []
@@ -105,9 +103,6 @@ class Representation():
                         expected_norm = 1.0
                     else:
                         expected_norm = 0.0
-                    if actual == expected_norm:
-                        score += expected
-                    max_score += expected
                     
                     if actual == expected_norm:
                         if actual == 1.0:
@@ -130,9 +125,8 @@ class Representation():
             if not ranking_tests:
 
                 dict_distance_metric = {}
-                dict_distance_metric['score'] = score
+                dict_distance_metric['score'] = (true_negatives + true_positives) / (false_negatives + false_positives + true_negatives + true_positives)
                 dict_distance_metric['metric'] = distance_metric
-                dict_distance_metric['max_score'] = max_score
                 dict_distance_metric['true_positives'] = true_positives
                 dict_distance_metric['false_positives'] = false_positives
                 dict_distance_metric['true_negatives'] = true_negatives
@@ -174,7 +168,7 @@ class Representation():
             plt.xlabel("Word")
             plt.ylabel("Change")
             plt.xticks(rotation=30)
-            plt.savefig(f'{dir_name}/{self.get_name()}_{distance_metric}_rank.png')
+            plt.savefig(f'{dir_name}/{self.get_name()}_{test_json["name"]}_{distance_metric}_rank.png')
             
             self.save_results(dir_name, distance_metric)
 

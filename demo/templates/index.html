@@ -2,12 +2,10 @@
 
 {% block body %}
 
-<div class="content">
-    <ul class="list-group">
-        {% for repressentation in model.repressentations %}
-            <li class="list-group-item"><a href="results?results={{repressentation.value}}"> {{repressentation.name}} </a></li>
-        {% endfor %}
-    </ul>
-</div>
+<ul class="list-group">
+    {% for repressentation in model.repressentations %}
+        <li class="list-group-item"><a href="results?results={{repressentation.value}}"> {{repressentation.name}} </a></li>
+    {% endfor %}
+</ul>
 
 {% endblock %}

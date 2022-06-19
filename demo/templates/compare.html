@@ -1,0 +1,14 @@
+{% extends 'dash_base.html' %}
+
+{% block body %}
+
+{% if model.no_models %}
+  <p>Please select at least 1 model</p>
+{% else %}
+  <div style="margin: 32px;">
+    <h1>Comparation</h1>
+    <div id='chart' class='chart'”></div>
+  </div>
+{% endif %}
+
+{% endblock %}

@@ -12,16 +12,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title> Semantic runs </title>
 </head>
 <body>
     <nav class="custom-navbar">
         <ul>
             <li><a href="/"><i class="fa fa-home"></i> Home </a></li>
+            <li><a href="/compare_select"><i class="fas fa-chart-bar"></i> Compare </a></li>
         </ul>
     </nav>
-    {% block body %}{% endblock %}
+    <div class="content">
+        {% block body %}{% endblock %}
+    </div>
     {% block scripts %}{% endblock %}
 </body>
 </html

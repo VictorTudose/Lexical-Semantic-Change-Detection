@@ -1,0 +1,414 @@
+{
+    "target": "demo/data",
+    "language": "en",
+    "name": "synthetic_50",
+    "description": "synthetic corpus test with 50 words replaced",
+    "ignore_spearmanr": 1,
+    "corpora": [
+        "corpora/alice/alice.txt",
+        "corpora/alice/alice_mod50.txt"
+    ],
+    "threshold": 0.05,
+    "tests": [
+        {
+            "word": "sleep,",
+            "expected": 1.0
+        },
+        {
+            "word": "so\u2014and",
+            "expected": 1.0
+        },
+        {
+            "word": "wide",
+            "expected": 1.0
+        },
+        {
+            "word": "flock",
+            "expected": 1.0
+        },
+        {
+            "word": "tie",
+            "expected": 1.0
+        },
+        {
+            "word": "business!\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "trials,",
+            "expected": 1.0
+        },
+        {
+            "word": "sort,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "family",
+            "expected": 1.0
+        },
+        {
+            "word": "sent",
+            "expected": 1.0
+        },
+        {
+            "word": "of",
+            "expected": 1.0
+        },
+        {
+            "word": "read:\u2014",
+            "expected": 1.0
+        },
+        {
+            "word": "kid",
+            "expected": 1.0
+        },
+        {
+            "word": "cushion,",
+            "expected": 1.0
+        },
+        {
+            "word": "tops",
+            "expected": 1.0
+        },
+        {
+            "word": "twinkling!",
+            "expected": 1.0
+        },
+        {
+            "word": "powdered",
+            "expected": 1.0
+        },
+        {
+            "word": "increasing",
+            "expected": 1.0
+        },
+        {
+            "word": "do,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "INDIRECT,",
+            "expected": 1.0
+        },
+        {
+            "word": "Lizard",
+            "expected": 1.0
+        },
+        {
+            "word": "teases.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "game,",
+            "expected": 1.0
+        },
+        {
+            "word": "mouth,",
+            "expected": 1.0
+        },
+        {
+            "word": "Arithmetic\u2014Ambition,",
+            "expected": 1.0
+        },
+        {
+            "word": "as,",
+            "expected": 1.0
+        },
+        {
+            "word": "bank,",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cRight,",
+            "expected": 1.0
+        },
+        {
+            "word": "hearing.",
+            "expected": 1.0
+        },
+        {
+            "word": "concluded",
+            "expected": 1.0
+        },
+        {
+            "word": "cats.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "telescope.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "window.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "replied.",
+            "expected": 1.0
+        },
+        {
+            "word": "lives",
+            "expected": 1.0
+        },
+        {
+            "word": "encourage",
+            "expected": 1.0
+        },
+        {
+            "word": "pig,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "then.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "earls",
+            "expected": 1.0
+        },
+        {
+            "word": "Majesty!\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "shape",
+            "expected": 1.0
+        },
+        {
+            "word": "ornamented",
+            "expected": 1.0
+        },
+        {
+            "word": "pepper-box",
+            "expected": 1.0
+        },
+        {
+            "word": "fitted!",
+            "expected": 1.0
+        },
+        {
+            "word": "Queen.",
+            "expected": 1.0
+        },
+        {
+            "word": "remark,",
+            "expected": 1.0
+        },
+        {
+            "word": "was!\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "red-hot",
+            "expected": 1.0
+        },
+        {
+            "word": "suit",
+            "expected": 1.0
+        },
+        {
+            "word": "puffed",
+            "expected": 1.0
+        },
+        {
+            "word": "allow",
+            "expected": 1.0
+        },
+        {
+            "word": "to,",
+            "expected": 1.0
+        },
+        {
+            "word": "is\u2014\u2018Take",
+            "expected": 1.0
+        },
+        {
+            "word": "address",
+            "expected": 1.0
+        },
+        {
+            "word": "tidy",
+            "expected": 1.0
+        },
+        {
+            "word": "likely",
+            "expected": 1.0
+        },
+        {
+            "word": "spoon",
+            "expected": 1.0
+        },
+        {
+            "word": "hundred",
+            "expected": 1.0
+        },
+        {
+            "word": "least\u2014at",
+            "expected": 1.0
+        },
+        {
+            "word": "fellow?",
+            "expected": 1.0
+        },
+        {
+            "word": "folding",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cThere\u2019s",
+            "expected": 1.0
+        },
+        {
+            "word": "fireplace",
+            "expected": 1.0
+        },
+        {
+            "word": "duck",
+            "expected": 1.0
+        },
+        {
+            "word": "sizes",
+            "expected": 1.0
+        },
+        {
+            "word": "happened.)",
+            "expected": 1.0
+        },
+        {
+            "word": "stays",
+            "expected": 1.0
+        },
+        {
+            "word": "Tortoise",
+            "expected": 1.0
+        },
+        {
+            "word": "certain!",
+            "expected": 1.0
+        },
+        {
+            "word": "up.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "its",
+            "expected": 1.0
+        },
+        {
+            "word": "window!\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "different",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201clet\u2019s",
+            "expected": 1.0
+        },
+        {
+            "word": "mixed",
+            "expected": 1.0
+        },
+        {
+            "word": "talking.",
+            "expected": 1.0
+        },
+        {
+            "word": "flappers,",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cTell",
+            "expected": 1.0
+        },
+        {
+            "word": "If",
+            "expected": 1.0
+        },
+        {
+            "word": "paused",
+            "expected": 1.0
+        },
+        {
+            "word": "West,",
+            "expected": 1.0
+        },
+        {
+            "word": "impatient",
+            "expected": 1.0
+        },
+        {
+            "word": "partners\u2014\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "practically",
+            "expected": 1.0
+        },
+        {
+            "word": "individual",
+            "expected": 1.0
+        },
+        {
+            "word": "Fender,_",
+            "expected": 1.0
+        },
+        {
+            "word": "names,\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cFirst",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201cFor",
+            "expected": 1.0
+        },
+        {
+            "word": "mushroom",
+            "expected": 1.0
+        },
+        {
+            "word": "sense,",
+            "expected": 1.0
+        },
+        {
+            "word": "secondly,",
+            "expected": 1.0
+        },
+        {
+            "word": "once.\u201d",
+            "expected": 1.0
+        },
+        {
+            "word": "\u2018_Turtle",
+            "expected": 1.0
+        },
+        {
+            "word": "couples:",
+            "expected": 1.0
+        },
+        {
+            "word": "patiently.",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201conly",
+            "expected": 1.0
+        },
+        {
+            "word": "ones",
+            "expected": 1.0
+        },
+        {
+            "word": "here;",
+            "expected": 1.0
+        },
+        {
+            "word": "had!\u201d",
+            "expected": 1.0
+        }
+    ]
+}
