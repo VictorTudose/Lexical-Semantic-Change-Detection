@@ -1,0 +1,1958 @@
+{
+    "target": "demo/data",
+    "language": "ro",
+    "name": "rodica_moldova_19vs20_21",
+    "description": "Moldovan corpora,one before the 19th century and one after the 20th century",
+    "corpora": [
+        "corpora/combined_19/Moldavia_19th.txt",
+        "corpora/combined_19/Moldavia_20_21th.txt"
+    ],
+    "threshold": 0.05,
+    "tests":[
+        {
+            "word": "buric",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "banc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "închis",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "veveriță",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "grâu",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "amiază",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vânăt",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "vânătă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "tigvă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "curcubetă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "dovleac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bărbat",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "budaşcă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "roș",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "botroș",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "pătlăgea",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "albastru",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "drob",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bruma",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "brumă",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "vatră",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bucă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ureche",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "uita",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bufniţă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cântător",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cot",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "cotar",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "căldăruşă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vita",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "vită",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "jivină",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "surâde",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "zâmbi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "albie",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "sec",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vas",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "fund",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "fundac",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "greu",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "însărcinată",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "fum",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "roş",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "vrăjitoare",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "butuc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cosaş",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "gaiţă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "geană",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "găină",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "aspru",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "fum",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "lapte",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "lapți",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "alb",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "albitură",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "fată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "căţea",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "veveriță",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "salutare",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "gât",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ţarcă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "caragaţă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "palmă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "parte",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "codru",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "codraş",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "deştept",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "buhai",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "cătușă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mâță",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ager",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "perdea",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vita",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "vită",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "jivină",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "clobaţ",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "poamă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "măr",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "orb",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "orbete",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "tigvă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "curcubetă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "dovleac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "scripcar",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "croitor",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "vacă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "veveriță",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cămaşă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "farmec",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "munci",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "întreg",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "teafăr",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "albitură",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "clopot",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "clopoţel",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "arc",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "arcuș",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "coşcodan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "boboc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "rus",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "prus",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "șvab",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cătușă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mâță",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "coş",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "pumn",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "necuvântător",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ochi",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "deochi",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "ţarcă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "caragaţă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bazin",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ochi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "car",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cald",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "țară",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "abraş",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "barbatus",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "bărbat",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "ţintui",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "crac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "turc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "leneș",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "crac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bestie",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "broască",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "jug",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "încet",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "buhai",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "Mercur",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mercur",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ochi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ţara",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "ţăran",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "inimă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "galben",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "turc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "buhai",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "țopârlan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "modîrlan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "lună",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "sâmbătă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "greu",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "acru",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "pleavă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "naviga",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ruga",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "icră",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mic",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "berbec",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "crac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mijlociu",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "crucea",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "crucea",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "brad",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "brădişor",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "ager",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cobzar",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "rus",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "prus",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "șvab",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cucuruz",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "aripă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "semănătură",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "adânc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "buhai",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "rege",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "coadă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "porc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vas",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "șarpe",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "șerpar",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "faţă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "Maria",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "lup",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bostanel",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "dovleac",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "dovlecel",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "mare",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "galben",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "gălbinare",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "turc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "iarbă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "deschis",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "maimuţă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "crucea",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "crucea",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "păpușă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "răspunde",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tigvă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "curcubetă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "dovleac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "butuc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mișca",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "mișcare",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "muta",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ciută",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "fluier",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "zvăn",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "zvon",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "sicriu",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "coadă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "abur",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "lumină",
+            "shift_type": "Cognates",
+            "expected": 1.0
+        },
+        {
+            "word": "lume",
+            "shift_type": "Cognates",
+            "expected": 1.0
+        },
+        {
+            "word": "Nescafé",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "zmeu",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tobă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "grădiniță",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "degetar",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "inimă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "dor",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "deşert",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ochi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bătăuș",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "braţ",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cucușor",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "jug",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "porumb",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ἅγιος",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "aghiuță",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "sfîntulețul",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "trântor",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "surâde",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "zâmbi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "coadă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "beli",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "sticlă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "copil",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mirosi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "fluierătoare",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "oglindă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ficat",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "degeaba",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "aripă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "παπαδιά",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "păpădie",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "deget",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "scurt",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bostanel",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "dovleac",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "dovlecel",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "mamaie",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "roade",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "păpușă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "clipă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "balamuc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "băiat",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "gheb",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "apprehendere",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "ἅγιος",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "aghiuță",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "sfîntulețul",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "deform",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "dumnezeu",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "Dumnezeule!",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ţipar",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ou",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cer",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cocoş",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "înfocat",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "crac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cufundar",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "alb",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "albitură",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "ochi",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "óchiu",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "veveriță",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "soare",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bărzăun",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "acrobat",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "Dumnezeu",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "Domnul",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "mijloc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "strelici",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "cocoş",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "decora",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "rus",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "prus",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "șvab",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ţipar",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "fustă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "drum",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "cale",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "cheie",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "cercel",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "gula",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "gură",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "broască",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "broscariţă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "bou",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "vacă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "greu",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "însărcinată",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "asurzi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "paludem",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "pădure",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "pîndă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "nebun",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ochi",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "stejar",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "vacă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "alună",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "groapă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mie",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "drum",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "cale",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "tulpină",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "gârlă",
+            "shift_type": "Borrowing",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bunică",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "porc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "fum",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vis",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "limbă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "jidov",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "lopată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "ver",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "vară",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "scripcar",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "croitor",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "strat",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "scară",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "Dumnezeu",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "Domnul",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "albăstrel",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vânăt",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "vinețea",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "brâu",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "brad",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "albăstrel",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vânăt",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "vinețea",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "județ",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "strigă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "țopârlan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "modîrlan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "căţel",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "tată",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "turc",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "poamă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "măr",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "țap",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "brâncă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "întreg",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "teafăr",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "căpuşă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "allevatum",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "aluat",
+            "shift_type": "Semantic evolution",
+            "expected": 1.0
+        },
+        {
+            "word": "monstru",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mână",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "mănunchi",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "tigvă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "curcubetă",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "dovleac",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "bostan",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "lung",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "fum",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "fumăriţă",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "suflare",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "papuc",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "sărman",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "gură",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "pară",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "vânătoare",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "aer",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        },
+        {
+            "word": "mișca",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "mișcare",
+            "shift_type": "Derivation",
+            "expected": 1.0
+        },
+        {
+            "word": "muta",
+            "shift_type": "Polysemy",
+            "expected": 1.0
+        }
+    ]
+}
