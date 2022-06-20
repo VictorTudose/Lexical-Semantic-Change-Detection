@@ -4,6 +4,7 @@ import json
 import pandas as pd
 import plotly
 import plotly.express as px
+import plotly.graph_objects as go
 import json
 import csv
 import numpy as np
@@ -61,9 +62,12 @@ def redirect():
                 fps.append(results['false_positives'])
                 tns.append(results['true_negatives'])
                 fns.append(results['false_negatives'])
-        model = {'name': names, 'true positives': tps, 'false positives': fps, 'true negatives': tns, 'false negatives': fns}
-        df = pd.DataFrame(model, columns=['name', 'true positives', 'false positives', 'true negatives', 'false negatives'])
-        fig = px.bar(df, x="name", y=['true positives','false positives','true negatives','false negatives'], barmode="group")
+        go_data = []
+        for name in names:
+            go_data.append(go.Bar( x=['true positives', 'false positives', 'true negatives', 'false negatives'],
+                                y=[tps[names.index(name)], fps[names.index(name)], tns[names.index(name)], fns[names.index(name)]],
+                            name = name))
+        fig = go.Figure(data=go_data)        
         fig.update_layout(barmode='group', xaxis_tickangle=-45)
         fig.update_xaxes(title_text="Metric")
         fig.update_yaxes(title_text="Count")

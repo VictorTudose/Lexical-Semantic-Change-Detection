@@ -3,7 +3,6 @@
     "language": "en",
     "name": "synthetic_50",
     "description": "synthetic corpus test with 50 words replaced",
-    "ignore_spearmanr": 1,
     "corpora": [
         "corpora/alice/alice.txt",
         "corpora/alice/alice_mod50.txt"

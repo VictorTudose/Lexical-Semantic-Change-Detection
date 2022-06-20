@@ -10,7 +10,7 @@ class SGNS(Representation):
          return "sgns_op"
 
     def distance_metrics(self):
-        return ['euclidean', 'cosine']
+        return ['euclidean', 'cosine', 'canberra', 'manhattan', 'braycurtis', 'correlation', 'sqeuclidean']
 
     def load_corpus(self, path, targets):
         data_file = open(path)

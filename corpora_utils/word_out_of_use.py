@@ -21,7 +21,7 @@ def main():
     freqs = {}
     lines = []
     replacements = {}
-    for line in open(f'{argv[1]}/{argv[2]}.txt', 'r'):
+    for line in open(f'corpora/{argv[1]}/{argv[2]}.txt', 'r'):
         line = line.strip().split()
         for word in line:
             count(freqs, word)
@@ -60,7 +60,7 @@ def main():
                 new_line.append(word)
         new_lines.append(new_line)
 
-    with open(f'{argv[1]}/{argv[2]}_mod{to_replace_count}.txt', 'w') as out:
+    with open(f'corpora/{argv[1]}/{argv[2]}_mod{to_replace_count}.txt', 'w') as out:
         for line in new_lines:
             out.write(" ".join(line) + "\n")
 
@@ -77,7 +77,6 @@ def main():
         "language": "en",
         "name": f"synthetic_{argv[3]}",
         "description": f"synthetic corpus test with {argv[3]} words replaced",
-        "ignore_spearmanr" : 1,
         "corpora": [
             f'corpora/{argv[1]}/{argv[2]}.txt',
             f'corpora/{argv[1]}/{argv[2]}_mod{to_replace_count}.txt'
@@ -86,7 +85,7 @@ def main():
         "tests": to_test
     }
 
-    with open(f'../tasks/{argv[2]}_mod_test{to_replace_count}.json', 'w') as out:
+    with open(f'tasks/{argv[2]}_mod_test{to_replace_count}.json', 'w') as out:
         json.dump(test_dict, out, indent=4)
 
 main()

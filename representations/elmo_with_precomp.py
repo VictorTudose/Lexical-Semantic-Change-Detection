@@ -10,7 +10,7 @@ class ELMo(Representation):
         self.clusterings = [{}, {}]
 
     def distance_metrics(self):
-        return ["pointwise", "jsd", "cluster_count"]
+        return ["pointwise_euclidean", "pointwise_cosine", 'pointwise_canberra', 'pointwise_jaccard', 'pointwise_manhattan', "jsd", "cluster_count"]
 
     def get_name(self):
         return "elmo"
@@ -24,7 +24,8 @@ class ELMo(Representation):
                 word = row[0].strip()
                 if word not in words:
                     words[word] = []
-                words[word].append(row[1:])
+                vals = [float(x) for x in row[1:]]
+                words[word].append(vals)
 
         for word in words:
             words[word] = pd.DataFrame(words[word])

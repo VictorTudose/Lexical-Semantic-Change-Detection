@@ -3,7 +3,9 @@
 {% block body %}
 
 {% if model.no_models %}
-  <p>Please select at least 1 model</p>
+  <div class="alert alert-danger" role="alert">
+    Please select at least 1 model
+  </div>
 {% else %}
   <div style="margin: 32px;">
     <h1>Comparation</h1>

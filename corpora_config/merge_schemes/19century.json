@@ -1,0 +1,13 @@
+{
+    "intervals" : {
+		"19th" : {
+			"start" : 1801,
+			"end" : 1900
+		},
+		"20_21th" : {
+			"start" : 1901,
+			"end" : 2100
+		}
+	},
+	"target_dir" : "corpora/combined_19"
+}

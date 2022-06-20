@@ -8,7 +8,7 @@ class SGNS(Representation):
          return "sgns_wi"
 
     def distance_metrics(self):
-        return ['euclidean', 'cosine']
+        return ['euclidean', 'cosine', 'canberra', 'manhattan', 'braycurtis', 'correlation', 'sqeuclidean']
 
 
     def load_corpus(self, path, targets, corpus_id):

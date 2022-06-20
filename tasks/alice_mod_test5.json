@@ -1,0 +1,53 @@
+{
+    "target": "demo/data",
+    "language": "en",
+    "name": "synthetic_5",
+    "description": "synthetic corpus test with 5 words replaced",
+    "corpora": [
+        "corpora/alice/alice.txt",
+        "corpora/alice/alice_mod5.txt"
+    ],
+    "threshold": 0.05,
+    "tests": [
+        {
+            "word": "to\u2014to",
+            "expected": 1.0
+        },
+        {
+            "word": "now",
+            "expected": 1.0
+        },
+        {
+            "word": "_are_",
+            "expected": 1.0
+        },
+        {
+            "word": "conversation.",
+            "expected": 1.0
+        },
+        {
+            "word": "O",
+            "expected": 1.0
+        },
+        {
+            "word": "Just",
+            "expected": 1.0
+        },
+        {
+            "word": "\u201c_You",
+            "expected": 1.0
+        },
+        {
+            "word": "an",
+            "expected": 1.0
+        },
+        {
+            "word": "scroll",
+            "expected": 1.0
+        },
+        {
+            "word": "END",
+            "expected": 1.0
+        }
+    ]
+}

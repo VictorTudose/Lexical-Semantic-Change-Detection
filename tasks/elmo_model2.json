@@ -2,13 +2,12 @@
     "target": "demo/data",
     "language": "en",
     "skip_training" : 1,
-    "name": "semeval_en",
+    "name": "semeval_en_model2",
     "description": "semeval_en",
     "corpora": [
-        "precomp_results/elmo_1_1.csv",
-        "precomp_results/elmo_1_2.csv"
+        "precomp_results/elmo_2_1.csv",
+        "precomp_results/elmo_2_2.csv"
     ],
-    "ignore_spearmanr" : 1,
     "threshold": 0.05,
     "tests": [
         {

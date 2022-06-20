@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import stats
 from torch import embedding
+import numpy as np
 
 class Representation():
     """
@@ -70,11 +71,11 @@ class Representation():
             os.mkdir(dir_name)
 
         for distance_metric in self.distance_metrics():
-
             self.actuals = []
             self.expecteds = []
             self.words = []
             self.results = []
+            self.distances = []
 
             true_positives = 0
             false_positives = 0
@@ -91,8 +92,17 @@ class Representation():
                 result = self.compare(word, distance_metric)
                 if result == None:
                     continue
-                
-                if result >= threshold:
+                    
+                self.distances.append(result)
+            
+            max_distance = np.max(self.distances)
+            min_distance = np.min(self.distances)
+
+            for distance in self.distances:
+                if max_distance - min_distance != 0:
+                    distance = (distance - min_distance) / (max_distance - min_distance)
+        
+                if distance >= threshold:
                     actual = 1.0
                 else:
                     actual = 0.0
@@ -118,7 +128,7 @@ class Representation():
 
                     self.expecteds.append(expected)
 
-                self.results.append(result)
+                self.results.append(distance)
                 self.actuals.append(actual)
                 self.words.append(word)
 
@@ -132,21 +142,15 @@ class Representation():
                 dict_distance_metric['true_negatives'] = true_negatives
                 dict_distance_metric['false_negatives'] = false_negatives
                 
-                if not "ignore_spearmanr" in test_json:
-                    sp = stats.spearmanr(self.results, self.expecteds)
-                    dict_distance_metric['spearmanr_pvalue'] = sp.pvalue
-                    dict_distance_metric['spearmanr_correlation'] = sp.correlation
-                
                 dict['results'].append(dict_distance_metric)
 
                 to_plot = {'Results': self.results,
                     'Expected': self.expecteds
                 }
 
-                df = pd.DataFrame(to_plot,columns=['Results','Expected'])
-                normalized_df=(df-df.mean())/df.std()
-                normalized_df.plot(x ='Results', y='Expected', kind = 'scatter')
-                plt.savefig(f'{dir_name}/{self.get_name()}_{distance_metric}_overall.png')
+                plt.scatter(self.results, self.expecteds)
+                plt.savefig(f'{dir_name}/{self.get_name()}_{test_json["name"]}_{distance_metric}_overall.png')
+                plt.close()
             
             word_dict = {}
             for word,result in list(zip(self.words,self.results)):
@@ -155,20 +159,13 @@ class Representation():
             plot_words = list(sorted_dict.keys())[-10:]
             plot_results = list(sorted_dict.values())[-10:]
 
-            if not ranking_tests:
-                plt.bar(plot_words, plot_results, color ='blue')
-            else:
-                for word in plot_words:
-                    i = self.words.index(word)
-                    if self.actuals[i] == 1:
-                        plt.bar(word, result, color ='green')
-                    else:
-                        plt.bar(word, result, color ='red')
+            plt.bar(plot_words, plot_results, color ='blue')
 
             plt.xlabel("Word")
             plt.ylabel("Change")
             plt.xticks(rotation=30)
             plt.savefig(f'{dir_name}/{self.get_name()}_{test_json["name"]}_{distance_metric}_rank.png')
+            plt.close()
             
             self.save_results(dir_name, distance_metric)
 
