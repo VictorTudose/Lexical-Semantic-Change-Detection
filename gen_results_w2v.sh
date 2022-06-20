@@ -18,5 +18,14 @@ python3 run.py sgns_op tasks/alice_mod_test50.json
 python3 run.py sgns_wi tasks/alice_mod_test100.json
 python3 run.py sgns_op tasks/alice_mod_test100.json
 
+python3 run.py sgns_wi tasks/rodica_wallachia.json
+python3 run.py sgns_wi tasks/rodica_transylvania.json
+python3 run.py sgns_wi tasks/rodica_bessarabia.json
+python3 run.py sgns_wi tasks/rodica_moldova.json
 
-# python3 run.py elmo_with_precomp tasks/elmo.json
+python3 run.py sgns_op tasks/rodica_wallachia.json
+python3 run.py sgns_op tasks/rodica_transylvania.json
+python3 run.py sgns_op tasks/rodica_bessarabia.json
+python3 run.py sgns_op tasks/rodica_moldova.json
+
+python3 run.py elmo_with_precomp tasks/elmo.json
