@@ -11,3 +11,5 @@ scripts/
 collab/models/
 demo/data
 __pycache__
+outputs/
+scripts/

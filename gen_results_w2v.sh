@@ -27,5 +27,3 @@ python3 run.py sgns_op tasks/rodica_wallachia.json
 python3 run.py sgns_op tasks/rodica_transylvania.json
 python3 run.py sgns_op tasks/rodica_bessarabia.json
 python3 run.py sgns_op tasks/rodica_moldova.json
-
-python3 run.py elmo_with_precomp tasks/elmo.json

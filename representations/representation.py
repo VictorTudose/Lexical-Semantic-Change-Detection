@@ -98,7 +98,7 @@ class Representation():
             max_distance = np.max(self.distances)
             min_distance = np.min(self.distances)
 
-            for distance in self.distances:
+            for distance, test in zip(self.distances, test_json['tests']):
                 if max_distance - min_distance != 0:
                     distance = (distance - min_distance) / (max_distance - min_distance)
         
@@ -143,10 +143,6 @@ class Representation():
                 dict_distance_metric['false_negatives'] = false_negatives
                 
                 dict['results'].append(dict_distance_metric)
-
-                to_plot = {'Results': self.results,
-                    'Expected': self.expecteds
-                }
 
                 plt.scatter(self.results, self.expecteds)
                 plt.savefig(f'{dir_name}/{self.get_name()}_{test_json["name"]}_{distance_metric}_overall.png')
