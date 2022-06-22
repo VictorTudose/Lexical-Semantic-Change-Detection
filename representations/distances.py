@@ -58,7 +58,10 @@ def compute_distances_for_sets(a, b, requested_distance_metric):
         max = np.max(rez)
         min = np.min(rez)
         mean = sum(sum(rez))/(len(rez)*len(rez[0]))
-        return (mean - min) / (max - min)
+        if max != min:
+            return (mean - min) / (max - min)
+        else:
+            return mean
     if requested_distance_metric == 'jsd':
         lena = len(a)
         lenb = len(b)

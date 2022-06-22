@@ -39,16 +39,6 @@ class Representation():
     def distance(self, word1, word2):
         return 0
 
-    def save_results(self, dir_name, distance_metric):
-        with open(f'{dir_name}/results_{distance_metric}.csv', 'w') as file:
-            writer = csv.writer(file)
-            writer.writerow(["Word", "Result", "Actual", "Expected"])
-            for (word_it ,result_it,actual, exprected) in list(zip(self.words \
-                    ,self.results\
-                    ,self.actuals\
-                    ,self.expecteds)) :
-                writer.writerow([word_it, result_it, actual, exprected])
-
     def do_test(self, path):
         test_file = open(path)
         test_json = json.load(test_file)
@@ -82,9 +72,6 @@ class Representation():
             true_negatives = 0
             false_negatives = 0
 
-            ranking_tests = False
-            if "ranking_tests" in test_json:
-                ranking_tests = True
 
             for test in test_json['tests']:
                 word = test['word']
@@ -99,6 +86,8 @@ class Representation():
             min_distance = np.min(self.distances)
 
             for distance, test in zip(self.distances, test_json['tests']):
+                word = test['word']
+                
                 if max_distance - min_distance != 0:
                     distance = (distance - min_distance) / (max_distance - min_distance)
         
@@ -107,63 +96,52 @@ class Representation():
                 else:
                     actual = 0.0
                 
-                if not ranking_tests:
-                    expected = float(test['expected'])
-                    if expected >= threshold:
-                        expected_norm = 1.0
+                expected = float(test['expected'])
+                if expected >= threshold:
+                    expected_norm = 1.0
+                else:
+                    expected_norm = 0.0
+                
+                if actual == expected_norm:
+                    if actual == 1.0:
+                        true_positives += 1
                     else:
-                        expected_norm = 0.0
-                    
-                    if actual == expected_norm:
-                        if actual == 1.0:
-                            true_positives += 1
-                        else:
-                            true_negatives += 1
+                        true_negatives += 1
+                else:
+                    if actual == 1.0:
+                        false_positives += 1
                     else:
-                        if actual == 1.0:
-                            false_positives += 1
-                        else:
-                            false_negatives += 1
+                        false_negatives += 1
 
 
-                    self.expecteds.append(expected)
-
+                self.expecteds.append(expected)
                 self.results.append(distance)
                 self.actuals.append(actual)
                 self.words.append(word)
 
-            if not ranking_tests:
-
-                dict_distance_metric = {}
-                dict_distance_metric['score'] = (true_negatives + true_positives) / (false_negatives + false_positives + true_negatives + true_positives)
-                dict_distance_metric['metric'] = distance_metric
-                dict_distance_metric['true_positives'] = true_positives
-                dict_distance_metric['false_positives'] = false_positives
-                dict_distance_metric['true_negatives'] = true_negatives
-                dict_distance_metric['false_negatives'] = false_negatives
-                
-                dict['results'].append(dict_distance_metric)
-
-                plt.scatter(self.results, self.expecteds)
-                plt.savefig(f'{dir_name}/{self.get_name()}_{test_json["name"]}_{distance_metric}_overall.png')
-                plt.close()
             
-            word_dict = {}
-            for word,result in list(zip(self.words,self.results)):
-                word_dict[word] = result
-            sorted_dict = {k: v for k, v in sorted(word_dict.items(), key=lambda item: item[1])}
-            plot_words = list(sorted_dict.keys())[-10:]
-            plot_results = list(sorted_dict.values())[-10:]
-
-            plt.bar(plot_words, plot_results, color ='blue')
-
-            plt.xlabel("Word")
-            plt.ylabel("Change")
-            plt.xticks(rotation=30)
-            plt.savefig(f'{dir_name}/{self.get_name()}_{test_json["name"]}_{distance_metric}_rank.png')
-            plt.close()
+            dict_distance_metric = {}
+            dict_distance_metric['score'] = (true_negatives + true_positives) / (false_negatives + false_positives + true_negatives + true_positives)
+            dict_distance_metric['metric'] = distance_metric
+            dict_distance_metric['true_positives'] = true_positives
+            dict_distance_metric['false_positives'] = false_positives
+            dict_distance_metric['true_negatives'] = true_negatives
+            dict_distance_metric['false_negatives'] = false_negatives
             
-            self.save_results(dir_name, distance_metric)
+            
+            word2result = {}
+            word2expected = {}
+            for word, result, expected in list(zip(self.words,self.results,self.expecteds)):
+                word2result[word] = result
+                word2expected[word] = expected
+            sorted_dict = {k: v for k, v in sorted(word2result.items(), key=lambda item: item[1])}
+            top_words = list(sorted_dict.keys())[-10:]
+            
+            topw2ex = []
+            for word in top_words:
+                topw2ex.append({word:[word2expected[word], sorted_dict[word]]})
+            dict_distance_metric["top_words"] = topw2ex
+            dict['results'].append(dict_distance_metric)
 
         with open(f'{dir_name}/words.csv', 'w') as file:
             writer = csv.writer(file)
@@ -177,5 +155,5 @@ class Representation():
                     writer.writerow(row)
                 
         desc_file = open(f"{dir_name}/desc.json", "w")
-        json.dump(dict, desc_file, indent = 4)
+        json.dump(dict, desc_file, indent = 4, ensure_ascii= False)
         desc_file.close()
